@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<HBox spacing="10.0" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="5.0">
+         <children>
+            <Label text="HFS Solution Tester">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <HBox spacing="10.0">
+               <children>
+                  <VBox spacing="10.0">
+                     <children>
+                        <Button mnemonicParsing="false" text="Import Dataset" />
+                        <Button mnemonicParsing="false" text="Import Solution" />
+                        <Button mnemonicParsing="false" text="Import Test Setup" />
+                     </children>
+                  </VBox>
+                  <Separator orientation="VERTICAL" />
+                  <VBox spacing="10.0">
+                     <children>
+                        <Label styleClass="header" text="Beta-Constrains" />
+                        <VBox spacing="5.0">
+                           <children>
+                              <CheckBox mnemonicParsing="false" text="skip" />
+                              <CheckBox mnemonicParsing="false" text="S_sd" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <Separator orientation="VERTICAL" />
+                  <VBox spacing="10.0">
+                     <children>
+                        <Label styleClass="header" text="Datasets" />
+                        <VBox spacing="5.0">
+                           <children>
+                              <CheckBox mnemonicParsing="false" text="Data 1" />
+                              <CheckBox mnemonicParsing="false" text="Data 2" />
+                              <CheckBox mnemonicParsing="false" text="Data 3" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <Separator orientation="VERTICAL" />
+                  <VBox spacing="10.0">
+                     <children>
+                        <Label styleClass="header" text="Solutions" />
+                        <VBox spacing="5.0">
+                           <children>
+                              <CheckBox mnemonicParsing="false" text="Low et al." />
+                              <CheckBox mnemonicParsing="false" text="Ruiz et al." />
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Label style="-fx-text-fill: red;" text="Error importing Dataset: The Dataset is formated incorrectly">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <HBox alignment="CENTER" spacing="10.0">
+               <children>
+                  <Button mnemonicParsing="false" text="Run" />
+                  <ProgressBar prefWidth="600.0" progress="0.0" />
+                  <Button mnemonicParsing="false" text="Cancel" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox spacing="5.0">
+         <children>
+            <Label styleClass="header" text="Console" />
+            <TextArea editable="false" prefWidth="200.0" text="Testing Solution:&#10;Low et al.&#10;- On Data 1:&#10;C_max found: 42&#10;Runtime needed: 1234 ms&#10;&#10;- On Data 3: &#10;C_max found: 123&#10;Runtime needed: 80 s&#10;&#10;Tested on:&#10;Intel Core i5-8400 @2.80GHz&#10;16GB Ram&#10;64-Bit Windows&#10;---------------------------" wrapText="true" VBox.vgrow="ALWAYS">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </TextArea>
+            <Button mnemonicParsing="false" text="Copy to Clipboard" />
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</HBox>
